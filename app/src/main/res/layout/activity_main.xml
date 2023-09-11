@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/icon"
+            android:layout_width="124dp"
+            android:layout_height="90dp"
+            android:src="@drawable/momo_icon"
+            android:layout_marginTop="89dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/momo_text"
+            android:layout_width="183dp"
+            android:layout_height="44dp"
+            android:src="@drawable/momo_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/icon" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/slogan_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semi_bold"
+            android:text="“Deliver the best momos”"
+            android:layout_marginTop="2dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/momo_text" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="14dp"
+            android:background="#D2CECE"
+            app:layout_constraintTop_toBottomOf="@+id/slogan_text" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:fontFamily="@font/inter_extra_bold"
+            android:text="Login To Your Account"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/divider" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/email_layout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="50dp"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="17dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/email_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp"
+                android:textColorHint="#807F7F"
+                android:fontFamily="@font/inter_semi_bold"
+                android:textFontWeight="600"
+                android:background="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginHorizontal="24dp"
+            android:layout_marginTop="17dp"
+            android:paddingHorizontal="25dp"
+            android:paddingVertical="17dp"
+            android:background="@drawable/edit_text_background"
+            app:layout_constraintTop_toBottomOf="@+id/email_layout">
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/password_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Password"
+                android:textSize="15sp"
+                android:inputType="textPassword"
+                android:textColorHint="#807F7F"
+                android:fontFamily="@font/inter_semi_bold"
+                android:textFontWeight="600"
+                android:background="@color/white"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/or_continue_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:fontFamily="@font/inter_extra_bold"
+            android:text="Or Continue With"
+            android:textSize="15sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/password_layout" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/facebook_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintEnd_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/or_continue_text">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageView"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/facebook_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="Facebook"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_regular"
+                android:textFontWeight="600"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView"
+                app:layout_constraintStart_toEndOf="@+id/imageView"
+                app:layout_constraintTop_toTopOf="@+id/imageView" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/google_button"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintStart_toStartOf="@+id/guideline"
+            app:layout_constraintTop_toBottomOf="@+id/or_continue_text">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="20dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/google_icon" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:text="Google"
+                android:textSize="15sp"
+                android:fontFamily="@font/inter_regular"
+                android:textFontWeight="600"
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintStart_toEndOf="@+id/imageView2"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/forgot_password_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_extra_bold"
+            android:layout_marginTop="35dp"
+            android:text="Forgot Your Password?"
+            android:textSize="15sp"
+            android:textColor="#FF4B4B"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/facebook_button" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
